@@ -15,7 +15,7 @@ $(function() {
             $(`<li><span class="shopping-item">${newItem}</span>${defaultShoppingControls}</li>`)
         );
 
-        // clear text field after submition
+        // clear text field after submission
         $('#shopping-list-entry').val('');
 
     });
