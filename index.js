@@ -15,8 +15,17 @@ $(function() {
             $(`<li><span class="shopping-item">${newItem}</span>${defaultShoppingControls}</li>`)
         );
     });
+});
 
+// create a function to handle clicks
+function shoppingListControlClicks() {
     // toggle the '.shopping-item__checked' class when the 'check" button is clicked
+    // listen for clicks on the 'check' button
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+    });
 
     // remove shopping item when the 'delete' button is clicked
-});
+}
+
+$(shoppingListControlClicks);
